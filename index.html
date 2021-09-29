@@ -11,15 +11,47 @@
 <body>
     <div class="flex-container">
         <div class="header">
-            <p>Time:<span id="countdown"></span></p>
+            <h1>Quiz</h1>
+            
+            <p><span id="countdown"></span></p>
         </div>
         <div class="main">
-            <div class="left-main"></div>
+            
+            <div class="left-main">
+                <div>
+                    <h2 id="question">Your questions will be here!</h2>
+                    <p id="instructions">You will have one minute to answer all the questions, every question answered incorrectly will reduce the time by 15 seconds. Press the Start button when you are ready, this will start the timer. Do not submit a score unless you finish. Quiz will be about the moon.</p>
+                </div>
+                <div id="options">
+                    <div id="#actualanswer"></div>
+                    <ol>
+                        <li><button id="#answer1"></button></li>
+                        <li><button id="#answer2"></button></li> 
+                        <li><button id="#answer3"></button></li>  
+                        <li><button id="#answer4"></button></li>  
+                    </ol>
+                    <div id="startBtn"></div>
+                    <div id="goBack"></div>
+                </div>
+            </div>
             <div class="right">
-                
+                <label for="first-name">Your Initials</label>
+                 <input type="text" name="initials" id="initials" placeholder=""/> 
+                <p>Your Score:</p>
+                <div id="submitBtn"></div>
+                <div>
+                    <h2>High Scores</h2>
+                    <div id="highscores">
+                        <li id="hs1"></li>
+                        <li id="hs2"></li>
+                        <li id="hs3"></li>
+                    </div>
+                </div> 
             </div>
         </div>
-        <div class="footer"></div>
+        <div class="footer">
+
+        </div>
     </div>
     
     <script src="script.js"></script>
