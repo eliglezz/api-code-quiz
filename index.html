@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,34 +19,26 @@
             
             <div class="left-main">
                 <div>
-                    <h2 id="question">Your questions will be here!</h2>
-                    <p id="instructions">You will have one minute to answer all the questions, every question answered incorrectly will reduce the time by 15 seconds. Press the Start button when you are ready, this will start the timer. Do not submit a score unless you finish. Quiz will be about the moon.</p>
+                    <h2 >Your questions will be here!</h2>
+                    <p class="instructions" id="instructions">You will have one minute to answer all the questions, every question answered incorrectly will reduce the time by 15 seconds. Press the Start button when you are ready, this will start the timer. Do not submit a score unless you finish. Quiz will be about the moon.</p>
                 </div>
+                <button  id="startBtn"></button>
+                <div><h2 class="question" id="question"></h2></div>
                 <div id="options">
                     <div id="#actualanswer"></div>
                     <ol>
-                        <li><button id="#answer1"></button></li>
-                        <li><button id="#answer2"></button></li> 
-                        <li><button id="#answer3"></button></li>  
-                        <li><button id="#answer4"></button></li>  
+                        <li id="answer1">   
+                        </li>
+                        <li id="answer2">
+                        </li>
+                        <li id="answer3">
+                        </li>
+                        <li id="answer4">
+                        </li> 
+                        <button id="submitBtn" hidden></button><button id="goBack" hidden></button>
                     </ol>
-                    <div id="startBtn"></div>
-                    <div id="goBack"></div>
+                    
                 </div>
-            </div>
-            <div class="right">
-                <label for="first-name">Your Initials</label>
-                 <input type="text" name="initials" id="initials" placeholder=""/> 
-                <p>Your Score:</p>
-                <div id="submitBtn"></div>
-                <div>
-                    <h2>High Scores</h2>
-                    <div id="highscores">
-                        <li id="hs1"></li>
-                        <li id="hs2"></li>
-                        <li id="hs3"></li>
-                    </div>
-                </div> 
             </div>
         </div>
         <div class="footer">

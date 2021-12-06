@@ -1,62 +1,19 @@
+var timerEl = document.querySelector("#countdown");
+var input = document.querySelector("#initials");
+var questionEl = document.querySelector("#question");
+var instructionEl = document.querySelector("#instructions")
+var answer1El = document.querySelector("#answer1");
+var answer2El = document.querySelector("#answer2");
+var answer3El = document.querySelector("#answer3");
+var answer4El = document.querySelector("#answer4");
+var hs1El = document.querySelector("#hs1");
+var hs2El = document.querySelector("#hs2");
+var hs3El = document.querySelector("#hs3");
+var answers = document.querySelector("#answers")
+                  
 var score = 0;
-var highScore;
-var timerEl = document.getElementById("countdown");
-var input = document.getElementById("initials");
-questionEl = document.querySelector("question");
-instructionEl = document.querySelector("instructions")
-answer1El = document.querySelector("#answer1");
-answer2El = document.querySelector("#answer2");
-answer3El = document.querySelector("#answer3");
-answer4El = document.querySelector("#answer4");
-hs1El = document.querySelector("#hs1");
-hs2El = document.querySelector("#hs2");
-hs3El = document.querySelector("#hs3");
-// <= defunct array I first tried to Use=>
-// var questions = [
-//   {
-//     question: "What is the distance between Earth and The Moon?",
-//     answers: {
-//       a: "The Moon’s distance from Earth is about 300,000 miles (383,000km).",
-//       b: "The Moon’s distance from Earth is about 340,000 miles (547,000km).",
-//       c: "The Moon’s distance from Earth is about 240,000 miles (385,000km).",
-//       d: "The Moon’s distance from Earth is about 200,000 miles (321,000km).",
-//     },
-//     correctAns: "c",
-//   },
-//   {
-//     question: "Where does the Moon get its light from?",
-//     answers: {
-//       a: "The Sun",
-//       b: "The Moon's atmosphere",
-//       c: "The Moon's Core",
-//       d: "The Earth",
-//     },
-//     correctAns: "a",
-//   },
-//   {
-//     question: "How much of Moon's Surface is usually lit up?",
-//     answers: {
-//       a: "25%",
-//       b: "100%",
-//       c: "75%",
-//       d: "50%",
-//     },
-//     correctAns: "d",
-//   },
-//   {
-//     question: "Approximately how wide is The Moon",
-//     answers: {
-//       a: "The Moon is about 2160 miles (3475km) wide.",
-//       b: "The Moon is about 2260 miles (3640km) wide.",
-//       c: "The Moon is about 3160 miles (5090km) wide.",
-//       d: "The Moon is about 3260 miles (5250km) wide.",
-//     },
-//     correctAns: "a",
-//   },
-// ];
-
-// <= countdown function =>
-// Timer that counts down from 5
+var highScore = 0;
+// <= countdown function => 
 function countdown() {
   var timeLeft = 60;
 
@@ -85,7 +42,7 @@ submitBtn.innerHTML = "Submit";
 submitBtn.addEventListener("click", function () {
   console.log("This works");
   if (score > 0) {
-    storeScore();
+    submitScore();
   } else {
     alert("You at least need to get one right!");
   }
@@ -123,15 +80,16 @@ startBtn.addEventListener("click", function startQuiz() {
   question1();
 });
 document.getElementById("startBtn").appendChild(startBtn); // change to where the button should be
-
+// <=== could not find a way to add the whole button with text had to remove, add button, add text====>
 function question1(){
+  questionEl.textContent = "What is the distance between Earth and The Moon?";
   
-  questionEl.textContent = "What is the distance between Earth and The Moon?"
-  answer1El.addEventListener("click") = "The Moon’s distance from Earth is about 300,000 miles (383,000km)."
-  answer2El.addEventListener("click") = "The Moon’s distance from Earth is about 340,000 miles (547,000km)."
-  answer3El.addEventListener("click") = "The Moon’s distance from Earth is about 240,000 miles (385,000km)."
-  answer4El.addEventListener("click") = "The Moon’s distance from Earth is about 200,000 miles (321,000km)."
-  if ( answer3El) {
+  answer1El.textContent = "The Moon’s distance from Earth is about 300,000 miles (383,000km)."
+  answer2El.textContent = "The Moon’s distance from Earth is about 340,000 miles (547,000km)."
+  answer3El.textContent = "The Moon’s distance from Earth is about 240,000 miles (385,000km)."
+  answer4El.textContent = "The Moon’s distance from Earth is about 200,000 miles (321,000km)."
+  addEventListener("click")
+  if ( answer3El === true) {
     score+=15;
     question2();
   } else {
@@ -189,5 +147,5 @@ function question4(){
 }
 
 function stopGame() {
-  time
+  
 }
