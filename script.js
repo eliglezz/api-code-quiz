@@ -88,14 +88,14 @@ function question1(){
   answer2El.textContent = "The Moon’s distance from Earth is about 340,000 miles (547,000km)."
   answer3El.textContent = "The Moon’s distance from Earth is about 240,000 miles (385,000km)."
   answer4El.textContent = "The Moon’s distance from Earth is about 200,000 miles (321,000km)."
-  addEventListener("click")
-  if ( answer3El === true) {
-    score+=15;
-    question2();
-  } else {
-    timeLeft-=15;
-    question2();
-  }
+  // addEventListener("click")
+  // if ( answer3El === true) {
+  //   score+=15;
+  //   question2();
+  // } else {
+  //   timeLeft-=15;
+  //   question2();
+  // }
 }
 
 function question2(){
